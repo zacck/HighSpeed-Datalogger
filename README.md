@@ -13,19 +13,16 @@ Develop a high-speed data logger using the STM32F4 microcontroller that captures
 ## Components Needed
 - **STM32F4 Discovery Board**: STM32F4 microcontroller for ADC, DAC, and DMA operations.
 - **Analog Signal Source**: DAC on the STM32F4 to generate test signals.
-- **SD Card Module**: For storing the logged data.
 - **Supporting Components**: Breadboard, wires, power supply, etc.
 
 ## Project Plan
 
 ### 1. Set Up Development Environment
-- **IDE**: Install STM32CubeIDE or another preferred IDE for STM32 development.
-- **Libraries**: Download and install the STM32 HAL library and middleware components for SD card access (FATFS).
+
 
 ### 2. Configure Hardware
 
 #### 2.1. STM32F4 Board Setup
-- Connect the SD card module to the STM32F4 board using SPI or SDIO interface.
 - Connect the DAC output to the ADC input pin.
 
 ### 3. Firmware Development
@@ -44,9 +41,6 @@ Develop a high-speed data logger using the STM32F4 microcontroller that captures
 - Use DMA to transfer data from the ADCs to a buffer in memory.
 - Use a timer to trigger the DAC for signal generation.
 
-#### 3.3. Data Storage
-- Implement SD card initialization and file system (using FATFS).
-- Write a function to store the buffered data into a file on the SD card.
 
 #### 3.4. User Interface
 - Implement basic controls to start and stop data logging.
